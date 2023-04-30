@@ -225,29 +225,13 @@ public class MainActivity extends Activity {
                 MainActivity.this.plBitDef = 0;
                 MainActivity.this.ESLType = 1;
                 break;
-
             case 1243:
-                MainActivity.this.scaneitype.setText("Type: " + MainActivity.this.PLType + " (Continuum E4 HCN FZ)");
+                MainActivity.this.scaneitype.setText("Type: " + MainActivity.this.PLType + " (Potentially Continuum E4 HCN FZ)");
                 MainActivity.this.plBitDef = 0;
                 MainActivity.this.ESLType = 1;
                 break;
 
             case 1217:
-            case 1628:
-                MainActivity.this.scaneitype.setText("Type: " + MainActivity.this.PLType + " (Support for 1628 296x128) EXPERIMENTAL");
-                MainActivity.this.wi = 296;
-                MainActivity.this.hi = 128;
-                MainActivity.this.ESLType = 2;
-                MainActivity.this.ESLTypeColor = true;
-                break;
-            case 1627:
-                MainActivity.this.scaneitype.setText("Type: " + MainActivity.this.PLType + " (Support for 1627 296x128) EXPERIMENTAL");
-                MainActivity.this.wi = 296;
-                MainActivity.this.hi = 128;
-                MainActivity.this.ESLType = 2;
-                MainActivity.this.ESLTypeColor = true;
-                break;
-
             case 1265:
                 MainActivity.this.scaneitype.setText("Type: " + MainActivity.this.PLType + " (Continuum E5 HCS)");
                 MainActivity.this.plBitDef = 2;
@@ -300,10 +284,11 @@ public class MainActivity extends Activity {
                 MainActivity.this.hi = 152;
                 MainActivity.this.ESLType = 2;
                 break;
-            case 1339:
-                MainActivity.this.scaneitype.setText("Type: " + MainActivity.this.PLType + " (SmartTag HD S Red 152x152) EXPERIMENTAL");
-                MainActivity.this.wi = 152;
-                MainActivity.this.hi = 152;
+            case 1627:
+            case 1628:
+                MainActivity.this.scaneitype.setText("Type: " + MainActivity.this.PLType + " (Support for 1628 296x128) EXPERIMENTAL");
+                MainActivity.this.wi = 296;
+                MainActivity.this.hi = 128;
                 MainActivity.this.ESLType = 2;
                 MainActivity.this.ESLTypeColor = true;
                 break;
