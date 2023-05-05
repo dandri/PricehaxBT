@@ -383,6 +383,7 @@ public class MainActivity extends Activity {
             case 1371: // 2021 revision of the SmartTag HD150 Red 648x480 - black housing
             case 1353:
             case 1354:
+            case 1334:
                 MainActivity.this.scaneitype.setText("Type: " + MainActivity.this.PLType + " (SmartTag HD150 Red 648x480)");
                 MainActivity.this.wi = 648;
                 MainActivity.this.hi = 480;
@@ -398,6 +399,7 @@ public class MainActivity extends Activity {
                 MainActivity.this.ESLType = 2;
                 break;
             case 1340:
+            case 1358:
                 MainActivity.this.scaneitype.setText("Type: " + MainActivity.this.PLType + " (SmartTag HD200 Red 800x480) EXPERIMENTAL");
                 MainActivity.this.wi = 800;
                 MainActivity.this.hi = 480;
@@ -412,13 +414,7 @@ public class MainActivity extends Activity {
                 MainActivity.this.ESLTypeColor = true;
                 break;
 
-            case 1334:
-                MainActivity.this.scaneitype.setText("Type: " + MainActivity.this.PLType + " (SmartTag HD300 960x540) EXPERIMENTAL");
-                MainActivity.this.wi = 960;
-                MainActivity.this.hi = 540;
-                MainActivity.this.ESLType = 2;
-                MainActivity.this.ESLTypeColor = true;
-                break;
+
 
             default:
                 MainActivity.this.scaneitype.setText("Type: " + MainActivity.this.PLType + " (incompatible)");
