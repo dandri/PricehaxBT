@@ -412,6 +412,14 @@ public class MainActivity extends Activity {
                 MainActivity.this.ESLTypeColor = true;
                 break;
 
+            case 1334:
+                MainActivity.this.scaneitype.setText("Type: " + MainActivity.this.PLType + " (SmartTag HD300 540x960) EXPERIMENTAL");
+                MainActivity.this.wi = 540;
+                MainActivity.this.hi = 960;
+                MainActivity.this.ESLType = 2;
+                MainActivity.this.ESLTypeColor = true;
+                break;
+
             default:
                 MainActivity.this.scaneitype.setText("Type: " + MainActivity.this.PLType + " (incompatible)");
                 MainActivity.this.ESLType = -1;
