@@ -413,9 +413,9 @@ public class MainActivity extends Activity {
                 break;
 
             case 1334:
-                MainActivity.this.scaneitype.setText("Type: " + MainActivity.this.PLType + " (SmartTag HD300 540x960) EXPERIMENTAL");
-                MainActivity.this.wi = 540;
-                MainActivity.this.hi = 960;
+                MainActivity.this.scaneitype.setText("Type: " + MainActivity.this.PLType + " (SmartTag HD300 960x540) EXPERIMENTAL");
+                MainActivity.this.wi = 960;
+                MainActivity.this.hi = 540;
                 MainActivity.this.ESLType = 2;
                 MainActivity.this.ESLTypeColor = true;
                 break;
