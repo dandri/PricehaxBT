@@ -18,6 +18,9 @@ Furrtek's videos of this project are archived in this [playlist](https://www.you
 ### Version 1.4
 
 Added support for:
+- HD 150
+- HD 200
+- 1624 Freezer
 - 1628 (B407047372716287)
 - 1639 (A406048236716396)
 - 1243 Continuum E4 HCW (F45324224927123434)
