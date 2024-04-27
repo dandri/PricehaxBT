@@ -18,6 +18,7 @@ Furrtek's videos of this project are archived in this [playlist](https://www.you
 ### Version 1.4
 
 Added support for:
+- HD 1603 Yellow
 - HD 150
 - HD 200
 - 1624 Freezer
