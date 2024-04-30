@@ -1,16 +1,39 @@
 /* 
- *  Pricehax BT IR dongle (for Pricehax Version 1.3 BT (21))
+ *  Pricehax BT IR dongle (for Pricehax Version 1.3+ BT (21+))
  *  furrtek 2014
- *  david4599 2019 - 2022
+ *  david4599 2019 - 2024
  */
 
 
 #define F_CPU 16000000UL
 #define NOP __asm__ __volatile__ ("nop")
 
+
+// Arduino Mega (digital pin 2 = physical pin PE4)
+#if (defined(ARDUINO_AVR_MEGA) || \
+    defined(ARDUINO_AVR_MEGA1280) || \
+    defined(ARDUINO_AVR_MEGA2560) || \
+    defined(__AVR_ATmega1280__) || \
+    defined(__AVR_ATmega1281__) || \
+    defined(__AVR_ATmega2560__) || \
+    defined(__AVR_ATmega2561__))
+
+#define SET_PORT_OUTPUT() (DDRE = 1 << 4)
+#define SET_LED_LOW() (PORTE &= ~(1 << 4))
+#define LED_TOGGLE() (PORTE ^= (1 << 4))
+
+// Arduino Uno, Nano and some others (digital pin 2 = physical pin PD2)
+#else
+
+#define SET_PORT_OUTPUT() (DDRD = 1 << 2)
+#define SET_LED_LOW() (PORTD &= ~(1 << 2))
+#define LED_TOGGLE() (PORTD ^= (1 << 2))
+
+#endif
+
+
 #define BT_RX_PIN 10
 #define BT_TX_PIN 12
-#define LED_PIN 2
 
 #define PULSES_PP4C 50
 #define PULSES_PP16 26
@@ -199,10 +222,10 @@ boolean getFrame() {
 // If the function is changed, the timings will need to be adjusted by adding or removing NOPs
 void sendPPMBurst(uint8_t pulses) {
     for(uint8_t i = 0; i < pulses; i++){
-        PORTD ^= (1 << LED_PIN);
+        LED_TOGGLE();
         NOP;
         NOP;
-        PORTD ^= (1 << LED_PIN);
+        LED_TOGGLE();
         NOP;
     }
 }
@@ -340,8 +363,8 @@ void sendPP16Frame() {
 
 
 void setup() {
-    DDRD |= (1 << LED_PIN); // Define led pin as output
-    PORTD &= (0 << LED_PIN); // Set led pin to low state
+    SET_PORT_OUTPUT();
+    SET_LED_LOW();
     
     cli(); // Stop all interrupts
     // Set bit TOIE0 in the TIMSK0 register to zero to disable timer0 interrupt
