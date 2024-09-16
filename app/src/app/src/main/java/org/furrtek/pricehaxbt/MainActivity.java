@@ -330,6 +330,8 @@ public class MainActivity extends Activity {
                 MainActivity.this.ESLType = 2;
                 MainActivity.this.ESLTypeColor = true;
                 break;
+
+            case 1603:
             case 1344:
                 MainActivity.this.scaneitype.setText("Type: " + MainActivity.this.PLType + " (SmartTag HD L Yellow 296x128) EXPERIMENTAL");
                 MainActivity.this.wi = 296;
@@ -367,6 +369,12 @@ public class MainActivity extends Activity {
                 MainActivity.this.hi = 300;
                 MainActivity.this.ESLType = 2;
                 MainActivity.this.ESLTypeColor = true;
+                break;
+            case 1381:
+                MainActivity.this.scaneitype.setText("Type: " + MainActivity.this.PLType + " (SmartTag HD110 Yellow 400x300) EXPERIMENTAL");
+                MainActivity.this.wi = 400;
+                MainActivity.this.hi = 300;
+                MainActivity.this.ESLType = 2;
                 break;
             case 1339:
             case 1639:
@@ -417,13 +425,7 @@ public class MainActivity extends Activity {
                 MainActivity.this.ESLTypeColor = true;
                 break;
 
-            case 1603:
-                MainActivity.this.scaneitype.setText("Type: " + MainActivity.this.PLType + " (SmartTag HD L Yellow 296x128) EXPERIMENTAL");
-                MainActivity.this.wi = 296;
-                MainActivity.this.hi = 128;
-                MainActivity.this.ESLType = 2;
-                MainActivity.this.ESLTypeColor = true;
-                break;
+
 
 
             default:
