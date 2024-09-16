@@ -375,6 +375,7 @@ public class MainActivity extends Activity {
                 MainActivity.this.wi = 400;
                 MainActivity.this.hi = 300;
                 MainActivity.this.ESLType = 2;
+                MainActivity.this.ESLTypeColor = true;
                 break;
             case 1339:
             case 1639:
