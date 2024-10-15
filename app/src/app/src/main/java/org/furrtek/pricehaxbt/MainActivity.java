@@ -411,6 +411,7 @@ public class MainActivity extends Activity {
                 MainActivity.this.ESLType = 2;
                 break;
             case 1340:
+            case 1367:
             case 1358: // Seems to be a new version of HD200
                 MainActivity.this.scaneitype.setText("Type: " + MainActivity.this.PLType + " (SmartTag HD200 Red 800x480) EXPERIMENTAL");
                 MainActivity.this.wi = 800;
